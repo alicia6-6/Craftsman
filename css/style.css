@@ -848,3 +848,27 @@ section.block { margin: 0 0 76px; }
 :root[data-theme="dark"] .footnote-popover { border-color: var(--border); }
 :root[data-theme="dark"] .footnote-popover::before { border-color: var(--border); }
 
+
+
+/* 포털 메인 바로가기 버튼 */
+.portal-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+.portal-back-btn:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+  background: var(--primary-soft);
+  transform: translateX(-2px);
+}
