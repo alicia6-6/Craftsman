@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="프로그래밍기능사 필기 합격 보장 핵심 요약노트 - 2026년 개정 출제기준(SQL·객체지향·웹기초·DevOps) 완벽 반영" />
+  <title>기출 핵심 요약노트 · 프로그래밍기능사</title>
+  <link rel="stylesheet" href="css/style.css?v=20260913-1" />
+  <script>(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+</head>
+<body>
+  <div class="wrap summary-wrap">
+    <header class="site-header">
+      <a class="brand" href="index.html"><span class="logo">P</span><span>프로그래밍기능사</span></a>
+      <div class="header-actions">
+        <nav class="top-nav" aria-label="주요 메뉴">
+          <a href="index.html">홈</a>
+          <a href="quiz.html?mode=random">랜덤문제</a>
+          <a href="quiz.html?mode=frequent">빈출문제</a>
+          <a href="quiz.html?mode=round">모의고사</a>
+          <a href="summary.html" class="active">요약노트</a>
+          <a href="quiz.html?mode=wrong">오답노트</a>
+        </nav>
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="테마 전환">🌙</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="summary-hero">
+        <div>
+          <span class="eyebrow">EXAM ESSENTIALS · 2026 신출제기준 반영</span>
+          <h1>기초 코딩부터 SQL·DevOps까지<br /><em>합격 핵심 요약노트</em></h1>
+          <p>2007~2011년 기출에서 지금도 유효한 운영체제·네트워크 기초를 추리고, 2026년부터 전면 개편된 <b>객체지향 프로그래밍·SQL·웹 화면구현(HTML/CSS/JS)·SW 테스트·DevOps/형상관리</b>까지 새 출제기준 그대로 정리했습니다.</p>
+        </div>
+        <div class="summary-score-card">
+          <span>시험 기준(2026~)</span>
+          <strong>60<small>문항</small></strong>
+          <p>1시간 / 객관식 4지택1<br />100점 만점 60점 이상 합격</p>
+        </div>
+      </section>
+
+      <div class="summary-notice">
+        <strong>합격 전략</strong>
+        <span>단일 필기과목(프로그래밍언어·응용SW기초·SQL·정보시스템기초) 60문항 중 36개 이상만 맞히면 합격입니다. 옛 기출이 남아있는 운영체제·네트워크에서 확실히 득점하고, 신설 영역인 SQL·객체지향·웹기초는 개념 위주로 빠르게 잡으세요!</span>
+      </div>
+
+      <div class="plain-box">
+        <b class="pb-label">💡 요약노트 200% 활용법</b>
+        <p>1. <b>파란 박스(쉽게 말하면)</b>: 낯선 용어를 생활 속 비유로 먼저 감을 잡습니다.<br />
+        2. <b>오렌지 박스(기출 함정)</b>: 실제 기출·예상 문제에서 반복되는 오답 패턴을 짚어줍니다.<br />
+        3. <b>남색 박스(암기 치트키)</b>·<b>코드/쿼리 예시 박스</b>: 문법과 실행 순서를 압축 정리합니다.<br />
+        4. <b><span class="badge-new">★최신개정</span> 표시</b>: 2026년 새 출제기준에서 신설/강화된 영역입니다. 과거 기출에는 없었지만 새로 반드시 챙겨야 합니다.<br />
+        5. <b>마지막 암기장(16장)</b>: 시험장 입실 후 10분 최종 점검용입니다.</p>
+      </div>
+
+      <!-- 상단 고정 목차 (TOC) -->
+      <nav class="toc summary-toc" aria-label="요약노트 목차">
+        <a href="#intro">0. 시험 개요</a>
+        <a href="#c1">1. C 기초문법</a>
+        <a href="#c2">2. 선택·반복구문</a>
+        <a href="#oop">3. 객체지향 프로그래밍</a>
+        <a href="#osi">4. OSI 7계층</a>
+        <a href="#ip">5. IP·TCP/UDP</a>
+        <a href="#os">6. 운영체제·리눅스 명령어</a>
+        <a href="#db">7. DB 개념·E-R모델링</a>
+        <a href="#ds">8. 무결성·자료구조</a>
+        <a href="#html">9. HTML·CSS 기초</a>
+        <a href="#js">10. JavaScript·UI테스트</a>
+        <a href="#sql1">11. SQL - SELECT·조인</a>
+        <a href="#sql2">12. SQL - DML·DDL·DCL</a>
+        <a href="#test">13. SW 테스트 기법</a>
+        <a href="#devops">14. DevOps·형상관리·백업</a>
+        <a href="#last">15. 파이널 암기장</a>
+      </nav>
+
+      <!-- 0. 시험 개요 -->
+      <section class="summary-section high-yield" id="intro">
+        <div class="section-kicker">00 · 시험 안내</div>
+        <h2>2026년 개정 출제기준, 무엇이 바뀌었나</h2>
+        <p class="lead">프로그래밍기능사는 2026년 완전히 새로운 출제기준으로 개편되었습니다. 옛 시험(전자계산기일반·PC운영체제·패키지활용·정보통신일반)의 상당수가 폐기되고, 실무형 웹·DB·테스트 역량 중심으로 재편되었습니다.</p>
+
+        <table>
+          <thead>
+            <tr><th>과거(~2011) 4과목 체계</th><th>2026~ 새 출제기준</th><th>변화</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>전자계산기일반</td><td><em>(과목 자체가 사라짐)</em></td><td><b>완전 폐기</b> — 컴퓨터 구조론은 더 이상 별도 출제 안 됨</td></tr>
+            <tr><td>패키지활용</td><td><em>(과목 자체가 사라짐)</em></td><td><b>완전 폐기</b> — 오피스 프로그램 조작법 출제 안 됨</td></tr>
+            <tr><td>PC운영체제 (윈도98/DOS 특화)</td><td>6. 개발자 환경 구축 (OS개념·리눅스 명령어)</td><td>Windows98/DOS 조작법은 폐기, <b>일반 OS개념·UNIX/Linux 명령어</b>는 그대로 유효</td></tr>
+            <tr><td>정보통신일반 (아날로그 통신공학)</td><td>2. 응용SW 기초 &gt; 네트워크 기초</td><td>변조방식·모뎀 등 아날로그 통신은 폐기, <b>OSI·프로토콜·IP·TCP/UDP</b>만 남음</td></tr>
+            <tr><td><em>(과거 출제 없음)</em></td><td>1. 프로그래밍 언어 활용(구조적+객체지향)</td><td><b>신설 <span class="badge-new">★최신개정</span></b> — C 기초문법 + 객체지향(상속/다형성/추상화)</td></tr>
+            <tr><td><em>(과거 출제 없음)</em></td><td>2. 응용SW &gt; DB기초, 3. 화면구현·UI테스트</td><td><b>신설 <span class="badge-new">★최신개정</span></b> — DB개념/E-R모델링, HTML/CSS/JS</td></tr>
+            <tr><td><em>(과거 출제 없음)</em></td><td>4. SQL 작성 및 활용</td><td><b>신설 <span class="badge-new">★최신개정</span></b> — SELECT/DML/DDL/DCL/트랜잭션</td></tr>
+            <tr><td><em>(과거 출제 없음)</em></td><td>5. 테스트 및 배포, 7. 개발환경 운영지원</td><td><b>신설 <span class="badge-new">★최신개정</span></b> — SW테스트기법, DevOps/CI-CD, 백업·형상관리</td></tr>
+          </tbody>
+        </table>
+
+        <div class="memory-box">
+          <b>시험시간 1시간 · 60문항 · 4지택1 · 100점 만점 60점 이상 합격</b>
+          <span>과목 통합으로 과목별 과락(40점) 기준이 없습니다</span>
+        </div>
+      </section>
+
+      <!-- 1. C 기초문법 -->
+      <section class="summary-section high-yield" id="c1">
+        <div class="section-kicker">01 · 프로그래밍 언어 활용 <span class="badge-new">★최신개정</span></div>
+        <h2>구조적 프로그래밍: C언어 기초문법</h2>
+        <p class="lead">변수·자료형·연산자·순차구문을 정확히 이해하면 코드 추적(트레이싱) 문제를 빠르게 풀 수 있습니다.</p>
+
+        <table>
+          <thead><tr><th>자료형</th><th>설명</th><th>예시</th></tr></thead>
+          <tbody>
+            <tr><td><code>int</code></td><td>정수형</td><td><code>int a = 10;</code></td></tr>
+            <tr><td><code>float</code> / <code>double</code></td><td>실수형(단precision/배정도)</td><td><code>float f = 3.14;</code></td></tr>
+            <tr><td><code>char</code></td><td>문자형(1바이트)</td><td><code>char c = 'A';</code></td></tr>
+          </tbody>
+        </table>
+
+        <div class="exam-trap">
+          <b>기출 함정: 정수 나눗셈</b><br />
+          <code>int a = 7, b = 2; float result = a / b;</code>의 결과는 <b>3.5가 아니라 3.0</b>입니다. <code>a/b</code>가 먼저 정수형 나눗셈(7/2=3)으로 계산된 뒤에야 float로 변환되기 때문입니다. 정수끼리 나눌 때는 소수점이 버려진다는 점을 반드시 기억하세요.
+        </div>
+
+        <h3>연산자 우선순위 핵심</h3>
+        <div class="worked-example">
+          <b>대표 계산 예시</b>
+          <p>
+            <code>2 + 3 * 4</code> → 곱셈이 먼저 → 2+12 = <b>14</b><br />
+            <code>a=5; b=a++;</code> → b는 증가 전 값(5)을 받고 a는 6이 됨 (후위 증가)<br />
+            <code>a=5; b=++a;</code> → a가 먼저 6이 된 후 b도 6 (전위 증가)
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. 선택·반복구문 -->
+      <section class="summary-section high-yield" id="c2">
+        <div class="section-kicker">01 · 프로그래밍 언어 활용 <span class="badge-new">★최신개정</span></div>
+        <h2>선택구문·반복구문·컴파일러</h2>
+
+        <h3>1. switch문의 fall-through 함정 (★단골 출제)</h3>
+        <div class="exam-trap">
+          <b>기출 함정</b><br />
+          <code>switch(n){ case 1: printf("A"); case 2: printf("B"); break; default: printf("C"); }</code>에서 <code>n=1</code>이면 <b>"AB"</b>가 출력됩니다. case 1에 <code>break</code>가 없으면 다음 case로 그대로 "흘러 내려가기(fall-through)" 때문입니다.
+        </div>
+
+        <h3>2. for / while / do-while 비교</h3>
+        <table>
+          <thead><tr><th>구문</th><th>조건 검사 시점</th><th>최소 실행 횟수</th></tr></thead>
+          <tbody>
+            <tr><td><code>for</code> / <code>while</code></td><td>반복 시작 <b>전</b>에 검사</td><td>0회 (조건이 처음부터 거짓이면 한 번도 안 돎)</td></tr>
+            <tr><td><code>do-while</code></td><td>반복 실행 <b>후</b>에 검사</td><td><b>최소 1회는 반드시 실행</b></td></tr>
+          </tbody>
+        </table>
+
+        <h3>3. 컴파일러 vs 인터프리터</h3>
+        <ul class="key-list">
+          <li><b>컴파일러</b>: 소스 전체를 한 번에 기계어로 번역 후 실행 파일 생성 (예: C, C++). 실행 속도가 빠름.</li>
+          <li><b>인터프리터</b>: 한 줄씩 해석하며 즉시 실행, 별도의 실행 파일을 만들지 않음 (예: Python, JavaScript 초기 실행 방식). 디버깅과 이식성에 유리.</li>
+          <li><b>컴파일 과정 순서</b>: 어휘분석 → 구문분석 → 의미분석 → 코드생성 → 최적화</li>
+        </ul>
+      </section>
+
+      <!-- 3. 객체지향 프로그래밍 -->
+      <section class="summary-section high-yield" id="oop">
+        <div class="section-kicker">01 · 프로그래밍 언어 활용 <span class="badge-new">★최신개정</span></div>
+        <h2>객체지향 프로그래밍(OOP) 4대 특성</h2>
+        <p class="lead">2026년 신출제기준의 핵심 신설 영역입니다. 4대 특성의 정의와 구분이 매 시험 출제 1순위입니다.</p>
+
+        <table>
+          <thead><tr><th>특성</th><th>의미</th><th>핵심 키워드</th></tr></thead>
+          <tbody>
+            <tr><td><b>캡슐화</b></td><td>데이터+메서드를 하나로 묶고 내부 구현을 은닉</td><td>정보 은닉, private</td></tr>
+            <tr><td><b>상속</b></td><td>부모 클래스의 속성·기능을 자식 클래스가 재사용</td><td>extends, 재사용</td></tr>
+            <tr><td><b>다형성</b></td><td>같은 이름의 메서드가 객체에 따라 다르게 동작</td><td>오버라이딩/오버로딩</td></tr>
+            <tr><td><b>추상화</b></td><td>공통 특성만 뽑아 일반화, 세부 구현은 감춤</td><td>추상클래스, 인터페이스</td></tr>
+          </tbody>
+        </table>
+
+        <div class="exam-trap">
+          <b>기출 함정: 오버로딩 vs 오버라이딩</b><br />
+          <b>오버로딩(Overloading)</b>은 같은 클래스 안에서 <b>매개변수의 개수·타입이 다른</b> 같은 이름의 메서드를 여러 개 정의하는 것이고, <b>오버라이딩(Overriding)</b>은 부모 클래스의 메서드를 자식 클래스가 <b>같은 시그니처로 재정의</b>하는 것입니다. 다형성은 주로 오버라이딩과 관련됩니다.
+        </div>
+
+        <ul class="key-list">
+          <li><b>동적 바인딩(Dynamic Binding)</b>: 실제로 호출될 메서드가 컴파일 시점이 아니라 <b>실행(런타임) 시점</b>에 객체의 실제 타입에 따라 결정되는 것. 다형성 구현의 핵심 메커니즘.</li>
+          <li><b>클래스 vs 객체</b>: 클래스는 설계도(틀), 객체는 클래스로부터 실제 생성된 인스턴스.</li>
+          <li><b>생성자(Constructor)</b>: 객체 생성 시 자동 호출되어 초기화를 수행하는 특수 메서드.</li>
+        </ul>
+      </section>
+
+      <!-- 4. OSI 7계층 -->
+      <section class="summary-section high-yield" id="osi">
+        <div class="section-kicker">02 · 응용SW 기초 &gt; 네트워크 기초</div>
+        <h2>OSI 7계층 참조모델</h2>
+        <p class="lead">옛 정보통신일반 시절부터 지금까지 변함없이 출제되는 최다 빈출 네트워크 개념입니다.</p>
+
+        <table>
+          <thead><tr><th>계층</th><th>이름</th><th>역할</th><th>대표 장비/프로토콜</th></tr></thead>
+          <tbody>
+            <tr><td>7</td><td>응용(Application)</td><td>사용자 응용 서비스 제공</td><td>HTTP, FTP, SMTP</td></tr>
+            <tr><td>6</td><td>표현(Presentation)</td><td>데이터 형식 변환, 암호화/압축</td><td>인코딩, SSL</td></tr>
+            <tr><td>5</td><td>세션(Session)</td><td>통신 세션 연결·관리·종료</td><td>세션 유지</td></tr>
+            <tr><td>4</td><td>전송(Transport)</td><td>종단간 신뢰성 있는 데이터 전송</td><td>TCP, UDP</td></tr>
+            <tr><td>3</td><td>네트워크(Network)</td><td>경로 설정(라우팅), 논리 주소</td><td>IP, 라우터</td></tr>
+            <tr><td>2</td><td>데이터링크(Data Link)</td><td>인접 노드간 전송, 오류검출</td><td>MAC, 스위치, 브리지</td></tr>
+            <tr><td>1</td><td>물리(Physical)</td><td>전기적 신호, 케이블 규격</td><td>허브, 리피터, 케이블</td></tr>
+          </tbody>
+        </table>
+
+        <div class="memory-box">
+          <b>암기 치트키: 물데네 전세표응 (아래→위)</b>
+          <span>물리 - 데이터링크 - 네트워크 - 전송 - 세션 - 표현 - 응용</span>
+        </div>
+      </section>
+
+      <!-- 5. IP·TCP/UDP -->
+      <section class="summary-section" id="ip">
+        <div class="section-kicker">02 · 응용SW 기초 &gt; 네트워크 기초</div>
+        <h2>IP 주소체계와 TCP vs UDP</h2>
+
+        <table>
+          <thead><tr><th>구분</th><th>TCP</th><th>UDP</th></tr></thead>
+          <tbody>
+            <tr><td>연결방식</td><td>연결지향(3-way handshake)</td><td>비연결지향</td></tr>
+            <tr><td>신뢰성</td><td>높음(재전송, 순서보장)</td><td>낮음(보장 없음)</td></tr>
+            <tr><td>속도</td><td>상대적으로 느림</td><td>빠름</td></tr>
+            <tr><td>대표 사용처</td><td>웹(HTTP), 파일전송, 메일</td><td>DNS, 실시간 스트리밍, 온라인게임</td></tr>
+          </tbody>
+        </table>
+
+        <ul class="key-list">
+          <li><b>IPv4 주소 형식</b>: 8비트씩 4부분, 총 32비트 (예: 192.168.0.1)</li>
+          <li><b>서브넷 마스크</b>: IP 주소를 네트워크 부분과 호스트 부분으로 구분하는 역할</li>
+          <li><b>사설(Private) IP 대역</b>: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 — 내부망 전용, 인터넷에서 직접 라우팅되지 않음</li>
+        </ul>
+      </section>
+
+      <!-- 6. 운영체제·리눅스 명령어 -->
+      <section class="summary-section high-yield" id="os">
+        <div class="section-kicker">06 · 개발자 환경 구축</div>
+        <h2>운영체제 개념과 UNIX/Linux 기본 명령어</h2>
+        <p class="lead">옛 PC운영체제 과목의 Windows98/DOS 특정 조작법은 전부 폐기되었지만, UNIX 명령어와 OS 이론(교착상태, 스케줄링 등)은 그대로 출제됩니다.</p>
+
+        <h3>1. UNIX/Linux 기본 명령어</h3>
+        <table>
+          <thead><tr><th>명령어</th><th>기능</th></tr></thead>
+          <tbody>
+            <tr><td><code>ls</code></td><td>디렉터리 내 파일 목록 표시</td></tr>
+            <tr><td><code>pwd</code></td><td>현재 작업 디렉터리 경로 출력</td></tr>
+            <tr><td><code>cd</code></td><td>디렉터리 이동</td></tr>
+            <tr><td><code>mkdir</code></td><td>디렉터리 생성</td></tr>
+            <tr><td><code>rm</code></td><td>파일/디렉터리 삭제</td></tr>
+            <tr><td><code>cp</code> / <code>mv</code></td><td>파일 복사 / 이동(이름변경)</td></tr>
+            <tr><td><code>cat</code></td><td>파일 내용을 화면에 출력</td></tr>
+            <tr><td><code>chmod</code></td><td>파일 접근 권한 변경</td></tr>
+            <tr><td><code>ps</code></td><td>현재 실행 중인 프로세스 정보 출력 (<code>-a</code>: 전체 프로세스)</td></tr>
+            <tr><td><code>kill</code></td><td>프로세스 종료 (반드시 PID를 인수로 필요로 함)</td></tr>
+            <tr><td><code>vi</code> / <code>emacs</code></td><td>대표적인 UNIX 텍스트 편집기</td></tr>
+          </tbody>
+        </table>
+
+        <h3>2. OS 핵심 이론 용어</h3>
+        <ul class="key-list">
+          <li><b>교착상태(Deadlock)</b>: 다중 프로그래밍 환경에서 둘 이상의 프로세스가 서로 상대방이 점유한 자원을 무한정 기다리며 진행이 멈추는 상태.</li>
+          <li><b>시분할 시스템(Time Sharing System)</b>: 여러 사용자가 터미널로 동시 접속해, 각자 짧은 타임 슬라이스만큼 CPU를 배분받아 마치 단독 사용하는 것처럼 느끼게 하는 방식.</li>
+          <li><b>일괄처리(Batch Processing)</b>: 작업을 모았다가 일정 시점에 한꺼번에 처리하는 방식.</li>
+          <li><b>가상기억장치</b>: 보조기억장치의 일부를 주기억장치처럼 사용해 실제 용량보다 큰 프로그램을 실행할 수 있게 하는 기법.</li>
+          <li><b>커널(Kernel)</b>: 프로세스·메모리·파일 관리 등 OS의 가장 핵심적인 기능을 수행하는 부분. UNIX의 3대 요소는 커널·셸(Shell)·파일시스템.</li>
+          <li><b>I-node</b>: UNIX 파일시스템에서 각 파일·디렉터리의 소유자·권한·크기 등 모든 메타정보를 담는 자료구조.</li>
+        </ul>
+      </section>
+
+      <!-- 7. DB 개념·E-R모델링 -->
+      <section class="summary-section high-yield" id="db">
+        <div class="section-kicker">02 · 응용SW 기초 &gt; 데이터베이스 기초 <span class="badge-new">★최신개정</span></div>
+        <h2>데이터베이스 개념과 E-R 모델링</h2>
+
+        <ul class="key-list">
+          <li><b>DBMS(데이터베이스 관리시스템)</b>: 데이터의 중복을 최소화하고 여러 응용프로그램이 데이터를 공유할 수 있게 관리하는 소프트웨어.</li>
+          <li><b>데이터베이스 3단계 스키마</b>: 외부 스키마(사용자 관점) - 개념 스키마(전체 논리 구조) - 내부 스키마(물리적 저장 구조)</li>
+          <li><b>데이터 모델링 단계</b>: 개념적 설계(E-R 다이어그램) → 논리적 설계(테이블 구조 확정) → 물리적 설계(저장 방식 결정)</li>
+        </ul>
+
+        <h3>E-R 모델 표기법</h3>
+        <table>
+          <thead><tr><th>도형</th><th>의미</th></tr></thead>
+          <tbody>
+            <tr><td>사각형</td><td>개체(Entity)</td></tr>
+            <tr><td>타원</td><td>속성(Attribute)</td></tr>
+            <tr><td>마름모</td><td>관계(Relationship)</td></tr>
+            <tr><td>선(Line)</td><td>개체와 속성/관계의 연결</td></tr>
+          </tbody>
+        </table>
+
+        <h3>데이터베이스 유형</h3>
+        <ul class="key-list">
+          <li><b>관계형(Relational)</b>: 테이블(행·열) 구조로 데이터를 표현. 현재 가장 널리 사용 (예: Oracle, MySQL).</li>
+          <li><b>계층형(Hierarchical)</b>: 트리 구조로 데이터를 표현, 1:N 관계에 적합.</li>
+          <li><b>NoSQL</b>: 고정된 테이블 스키마 없이 유연하게 대용량 데이터를 다루는 최신 방식 (예: MongoDB).</li>
+        </ul>
+      </section>
+
+      <!-- 8. 무결성·자료구조 -->
+      <section class="summary-section" id="ds">
+        <div class="section-kicker">02 · 응용SW 기초 &gt; 데이터베이스 기초 <span class="badge-new">★최신개정</span></div>
+        <h2>데이터 무결성과 자료구조 기본</h2>
+
+        <table>
+          <thead><tr><th>무결성 종류</th><th>의미</th></tr></thead>
+          <tbody>
+            <tr><td>개체 무결성</td><td>기본키(Primary Key)는 NULL이 될 수 없고 중복될 수 없다</td></tr>
+            <tr><td>참조 무결성</td><td>외래키(Foreign Key) 값은 참조하는 테이블에 실제로 존재하는 값이거나 NULL이어야 한다</td></tr>
+            <tr><td>도메인 무결성</td><td>컬럼 값은 정의된 데이터 타입·범위를 벗어날 수 없다</td></tr>
+          </tbody>
+        </table>
+
+        <h3>기본 자료구조 개념 비교</h3>
+        <table>
+          <thead><tr><th>자료구조</th><th>특징</th></tr></thead>
+          <tbody>
+            <tr><td><b>스택(Stack)</b></td><td>LIFO(후입선출) — 마지막에 넣은 데이터가 가장 먼저 나옴</td></tr>
+            <tr><td><b>큐(Queue)</b></td><td>FIFO(선입선출) — 먼저 넣은 데이터가 먼저 나옴</td></tr>
+            <tr><td><b>배열(Array)</b></td><td>인덱스로 빠른 접근(O(1)), 중간 삽입·삭제는 비효율적</td></tr>
+            <tr><td><b>연결리스트(Linked List)</b></td><td>포인터로 연결, 삽입·삭제가 빠르지만 접근은 순차적으로만 가능</td></tr>
+            <tr><td><b>트리(Tree)</b></td><td>계층적 구조, 루트-부모-자식 관계로 구성</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 9. HTML·CSS -->
+      <section class="summary-section high-yield" id="html">
+        <div class="section-kicker">03 · 화면구현 및 UI테스트 <span class="badge-new">★최신개정</span></div>
+        <h2>HTML·CSS 기초</h2>
+
+        <ul class="key-list">
+          <li><b>&lt;!DOCTYPE html&gt;</b>: HTML5 문서임을 브라우저에 선언하는 최상단 구문.</li>
+          <li><b>시맨틱 태그</b>: &lt;header&gt;, &lt;nav&gt;, &lt;article&gt;, &lt;section&gt;, &lt;footer&gt; 등 의미를 담은 태그 — 검색엔진 최적화·접근성에 유리.</li>
+          <li><b>&lt;input type="password"&gt;</b>: 입력값이 화면에 ●●● 형태로 가려져 표시되는 입력 필드.</li>
+        </ul>
+
+        <h3>CSS 선택자 우선순위(specificity) ★단골 출제</h3>
+        <div class="memory-box">
+          <b>우선순위: 인라인 &gt; id(#) &gt; class(.)/속성 &gt; 태그</b>
+          <span>더 구체적인 선택자가 항상 이긴다 (단, !important는 예외적으로 최우선)</span>
+        </div>
+        <div class="exam-trap">
+          <b>기출 함정</b><br />
+          <code>#box { color: red; }</code>와 <code>.item { color: blue; }</code>가 동시에 적용되는 요소가 있다면, <b>id 선택자(#)가 class 선택자(.)보다 우선순위가 높으므로</b> 글자색은 <b>red</b>가 됩니다.
+        </div>
+
+        <h3>박스 모델(Box Model)</h3>
+        <p>content(내용) → padding(안쪽 여백) → border(테두리) → margin(바깥 여백) 순으로 바깥쪽으로 감싸는 구조입니다. <code>position: absolute</code>는 가장 가까운 <code>position</code>이 지정된 조상 요소를 기준으로 배치됩니다.</p>
+      </section>
+
+      <!-- 10. JavaScript·UI테스트 -->
+      <section class="summary-section high-yield" id="js">
+        <div class="section-kicker">03 · 화면구현 및 UI테스트 <span class="badge-new">★최신개정</span></div>
+        <h2>JavaScript 기초와 UI/UX·테스트 기법</h2>
+
+        <ul class="key-list">
+          <li><b>변수 선언</b>: <code>var</code>(함수 스코프, 재선언 가능) / <code>let</code>(블록 스코프, 재할당 가능) / <code>const</code>(블록 스코프, <b>재할당 불가</b>).</li>
+          <li><b>DOM 접근</b>: <code>document.getElementById("id")</code>로 특정 요소를 선택.</li>
+          <li><b>이벤트 처리</b>: <code>onclick</code>, <code>addEventListener</code>로 사용자 동작(클릭 등)에 반응하는 코드 실행.</li>
+        </ul>
+
+        <div class="exam-trap">
+          <b>기출 함정</b><br />
+          <code>const x = 5; x = 10;</code>는 <b>TypeError(재할당 오류)</b>가 발생합니다. const로 선언한 변수는 재할당이 금지되기 때문입니다.
+        </div>
+
+        <h3>UI/UX 개념과 테스트 기법</h3>
+        <table>
+          <thead><tr><th>용어</th><th>의미</th></tr></thead>
+          <tbody>
+            <tr><td>UI(User Interface)</td><td>사용자가 시스템과 상호작용하는 화면·조작 요소 자체</td></tr>
+            <tr><td>UX(User Experience)</td><td>사용자가 제품을 사용하며 느끼는 전체적인 경험·만족도</td></tr>
+            <tr><td>와이어프레임</td><td>화면 레이아웃을 뼈대만 간단히 그린 설계도</td></tr>
+            <tr><td>반응형 웹 디자인</td><td>화면 크기(PC/모바일)에 따라 레이아웃이 자동으로 조정되는 디자인</td></tr>
+            <tr><td>크로스 브라우징 테스트</td><td>여러 브라우저(Chrome/Edge/Safari 등)에서 동일하게 동작하는지 확인하는 테스트</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 11. SQL - SELECT·조인 -->
+      <section class="summary-section high-yield" id="sql1">
+        <div class="section-kicker">04 · SQL 작성 및 활용 <span class="badge-new">★최신개정</span></div>
+        <h2>SQL 기본: SELECT·조인·서브쿼리</h2>
+        <p class="lead">2026 신출제기준에서 가장 비중이 큰 완전 신설 영역입니다. Oracle 표준 SQL 문법 기준으로 정리합니다.</p>
+
+        <div class="worked-example">
+          <b>SELECT 기본 구조와 실행 순서</b>
+          <p>
+            <code>SELECT 컬럼 FROM 테이블 WHERE 조건 GROUP BY 그룹기준 HAVING 그룹조건 ORDER BY 정렬기준;</code><br />
+            실제 처리 순서: <b>FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY</b><br />
+            <mark>WHERE는 그룹화 전 개별 행 필터링, HAVING은 그룹화 후 집계결과 필터링</mark>에 사용합니다.
+          </p>
+        </div>
+
+        <h3>JOIN 종류</h3>
+        <table>
+          <thead><tr><th>JOIN 종류</th><th>결과</th></tr></thead>
+          <tbody>
+            <tr><td>INNER JOIN</td><td>양쪽 테이블에서 조건이 일치하는 행만 반환</td></tr>
+            <tr><td>LEFT OUTER JOIN</td><td>왼쪽 테이블은 모두 포함, 오른쪽은 일치하는 것만(없으면 NULL)</td></tr>
+            <tr><td>RIGHT OUTER JOIN</td><td>오른쪽 테이블은 모두 포함, 왼쪽은 일치하는 것만(없으면 NULL)</td></tr>
+          </tbody>
+        </table>
+
+        <h3>집합 연산자</h3>
+        <ul class="key-list">
+          <li><b>UNION</b>: 두 결과를 합치고 <b>중복 제거</b></li>
+          <li><b>UNION ALL</b>: 두 결과를 합치되 <b>중복 포함</b> (UNION보다 빠름)</li>
+          <li><b>INTERSECT</b>: 두 결과의 <b>교집합</b></li>
+          <li><b>MINUS</b>: 첫 번째 결과에서 두 번째 결과를 <b>뺀 차집합</b></li>
+        </ul>
+      </section>
+
+      <!-- 12. SQL - DML·DDL·DCL -->
+      <section class="summary-section high-yield" id="sql2">
+        <div class="section-kicker">04 · SQL 작성 및 활용 <span class="badge-new">★최신개정</span></div>
+        <h2>DML·DDL·DCL과 트랜잭션</h2>
+
+        <table>
+          <thead><tr><th>분류</th><th>명령어</th><th>기능</th></tr></thead>
+          <tbody>
+            <tr><td><b>DML</b><br />(데이터 조작어)</td><td>INSERT / UPDATE / DELETE</td><td>데이터 삽입·수정·삭제 (ROLLBACK 가능)</td></tr>
+            <tr><td><b>DDL</b><br />(데이터 정의어)</td><td>CREATE / ALTER / DROP</td><td>테이블·인덱스·뷰 등 객체 구조 정의 (실행 즉시 자동 COMMIT)</td></tr>
+            <tr><td><b>DCL</b><br />(데이터 제어어)</td><td>GRANT / REVOKE</td><td>사용자 권한 부여·회수</td></tr>
+          </tbody>
+        </table>
+
+        <div class="exam-trap">
+          <b>기출 함정: DELETE vs TRUNCATE vs DROP</b><br />
+          <b>DELETE</b>(DML)는 행 단위로 삭제하며 ROLLBACK으로 취소 가능합니다. <b>TRUNCATE</b>(DDL)는 테이블의 모든 데이터를 한번에 비우며 실행 즉시 자동 커밋되어 <b>되돌릴 수 없습니다</b>. <b>DROP</b>은 테이블 구조 자체를 완전히 삭제합니다.
+        </div>
+
+        <h3>트랜잭션과 ACID</h3>
+        <div class="memory-box">
+          <b>ACID: 원자성·일관성·고립성·지속성</b>
+          <span>Atomicity(전부성공 or 전부실패) · Consistency · Isolation · Durability</span>
+        </div>
+        <ul class="key-list">
+          <li><b>COMMIT</b>: 트랜잭션의 변경사항을 영구 저장</li>
+          <li><b>ROLLBACK</b>: 트랜잭션의 변경사항을 취소하고 이전 상태로 복구</li>
+          <li><b>SAVEPOINT</b>: 트랜잭션 중간에 저장점을 지정해, <code>ROLLBACK TO 저장점명</code>으로 특정 지점까지만 되돌릴 수 있게 함</li>
+        </ul>
+      </section>
+
+      <!-- 13. SW 테스트 -->
+      <section class="summary-section high-yield" id="test">
+        <div class="section-kicker">05 · 테스트 및 배포 <span class="badge-new">★최신개정</span></div>
+        <h2>SW 테스트 기법: 단위·통합·블랙박스·화이트박스</h2>
+
+        <table>
+          <thead><tr><th>구분</th><th>대상/방식</th></tr></thead>
+          <tbody>
+            <tr><td><b>단위 테스트</b></td><td>모듈(함수) 하나하나를 개별 검증</td></tr>
+            <tr><td><b>통합 테스트</b></td><td>여러 모듈을 결합했을 때 모듈 간 인터페이스 검증 (상향식/하향식)</td></tr>
+            <tr><td><b>블랙박스 테스트</b></td><td>내부 코드 구조를 보지 않고 입력·출력만으로 검증 (동등분할, 경계값분석 기법)</td></tr>
+            <tr><td><b>화이트박스 테스트</b></td><td>내부 로직·분기 경로까지 직접 확인 (구문 커버리지 등)</td></tr>
+          </tbody>
+        </table>
+
+        <ul class="key-list">
+          <li><b>동등분할(Equivalence Partitioning)</b>: 입력값을 유효/무효 그룹으로 나누고 각 그룹 대표값만 테스트.</li>
+          <li><b>경계값 분석(Boundary Value Analysis)</b>: 입력 범위의 경계(최소/최대 근처)에서 오류가 많이 발생하므로 경계값을 집중 테스트.</li>
+          <li><b>디버깅(Debugging)</b>: 테스트로 발견된 오류의 원인을 찾아 수정하는 과정. 브레이크포인트로 특정 지점에서 실행을 멈추고 상태를 확인.</li>
+        </ul>
+      </section>
+
+      <!-- 14. DevOps·형상관리·백업 -->
+      <section class="summary-section high-yield" id="devops">
+        <div class="section-kicker">5·7 · 테스트 및 배포 / 개발환경 운영지원 <span class="badge-new">★최신개정</span></div>
+        <h2>DevOps·CI/CD·형상관리·백업</h2>
+
+        <ul class="key-list">
+          <li><b>DevOps</b>: 개발(Development)과 운영(Operations)을 통합해 빠르고 안정적으로 소프트웨어를 배포하는 문화·방법론.</li>
+          <li><b>CI(지속적 통합)</b>: 코드 변경사항을 자주 통합하고 자동으로 빌드·테스트하는 것.</li>
+          <li><b>CD(지속적 배포)</b>: 테스트를 통과한 코드를 자동으로 운영 환경까지 배포하는 것.</li>
+        </ul>
+
+        <h3>형상관리(버전관리)</h3>
+        <table>
+          <thead><tr><th>Git 개념</th><th>의미</th></tr></thead>
+          <tbody>
+            <tr><td><code>commit</code></td><td>변경사항을 저장소에 기록</td></tr>
+            <tr><td><code>branch</code></td><td>독립적으로 작업할 수 있는 가지를 생성</td></tr>
+            <tr><td><code>merge</code></td><td>서로 다른 브랜치의 변경사항을 하나로 합침</td></tr>
+            <tr><td><code>checkout</code></td><td>다른 브랜치나 특정 커밋 시점으로 작업 상태를 전환</td></tr>
+          </tbody>
+        </table>
+        <p><b>중앙집중형 형상관리</b>(예: SVN)는 중앙 서버 하나가 모든 이력을 관리하고, <b>분산형 형상관리</b>(예: Git)는 개발자 각자가 전체 이력의 사본을 로컬에 가져 서버 장애에도 작업이 가능합니다.</p>
+
+        <h3>백업 방식 비교</h3>
+        <table>
+          <thead><tr><th>방식</th><th>특징</th></tr></thead>
+          <tbody>
+            <tr><td>전체 백업(Full)</td><td>전체 데이터를 매번 백업 — 복원 빠르지만 시간·용량 많이 소요</td></tr>
+            <tr><td>증분 백업(Incremental)</td><td>직전 백업 이후 변경분만 백업 — 백업은 빠르지만 복원 시 여러 백업을 순차 적용해야 함</td></tr>
+            <tr><td>차등 백업(Differential)</td><td>마지막 전체 백업 이후 변경분 전체를 백업 — 증분보다 용량은 크지만 복원은 더 간단</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 15. 파이널 암기장 -->
+      <section class="summary-section final-sheet" id="last">
+        <div class="section-kicker">15 · LAST CHECK</div>
+        <h2>시험장 들어가기 전 마지막 10분 초압축 암기장</h2>
+        <p class="lead">헷갈리기 쉬운 정의·순서·차이점을 한눈에 최종 점검하세요.</p>
+
+        <div class="last-grid">
+          <div>
+            <b>OSI 7계층(아래→위)</b>
+            <p>
+              1물리 - 2데이터링크<br />
+              3네트워크 - 4전송<br />
+              5세션 - 6표현 - 7응용<br />
+              "물데네 전세표응"
+            </p>
+          </div>
+          <div>
+            <b>TCP vs UDP</b>
+            <p>
+              TCP: 연결지향·신뢰성↑·느림<br />
+              UDP: 비연결·신뢰성↓·빠름<br />
+              TCP=웹/메일, UDP=DNS/스트리밍
+            </p>
+          </div>
+          <div>
+            <b>OOP 4대 특성</b>
+            <p>
+              캡슐화·상속·다형성·추상화<br />
+              오버로딩=매개변수 다른 같은이름<br />
+              오버라이딩=부모메서드 재정의
+            </p>
+          </div>
+          <div>
+            <b>SQL 실행 순서</b>
+            <p>
+              FROM→WHERE→GROUP BY<br />
+              →HAVING→SELECT→ORDER BY<br />
+              DML(취소가능) vs DDL(자동커밋)
+            </p>
+          </div>
+          <div>
+            <b>SQL 집합연산자</b>
+            <p>
+              UNION=합집합(중복제거)<br />
+              UNION ALL=합집합(중복포함)<br />
+              INTERSECT=교집합<br />
+              MINUS=차집합
+            </p>
+          </div>
+          <div>
+            <b>테스트 기법</b>
+            <p>
+              단위→통합 (검증 범위)<br />
+              블랙박스=입출력만 확인<br />
+              화이트박스=내부로직 확인
+            </p>
+          </div>
+          <div>
+            <b>UNIX 명령어</b>
+            <p>
+              ls=목록, pwd=경로<br />
+              rm=삭제, ps=프로세스<br />
+              kill=종료(PID 필수 인수)
+            </p>
+          </div>
+          <div>
+            <b>백업·형상관리</b>
+            <p>
+              전체&gt;차등&gt;증분 (백업용량)<br />
+              증분 복원=여러 백업 순차 적용<br />
+              Git: commit·branch·merge
+            </p>
+          </div>
+        </div>
+
+        <div class="final-cta">
+          <div>
+            <b>개념 정리를 마쳤다면 이제 실전 모의고사를 풀어보세요!</b>
+            <span>직접 문제를 풀며 틀린 부분은 해당 섹션으로 돌아와 다시 확인하면 완벽합니다.</span>
+          </div>
+          <a class="btn" href="quiz.html?mode=round">회차별 실전 모의고사 풀기</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      프로그래밍기능사 필기 합격 대비 요약노트 · 2026 개정 출제기준 반영
+    </footer>
+  </div>
+
+  <script src="js/theme.js"></script>
+  <script src="js/summary-footnotes.js" defer></script>
+</body>
+</html>

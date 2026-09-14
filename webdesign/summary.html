@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="웹디자인개발기능사 필기 합격 보장 핵심 요약노트 - 2025년 개정 출제기준(UX·프로토타입·조색·배색·저작권) 완벽 반영" />
+  <title>기출 핵심 요약노트 · 웹디자인개발기능사</title>
+  <link rel="stylesheet" href="css/style.css?v=20260913-1" />
+  <script>(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+</head>
+<body>
+  <div class="wrap summary-wrap">
+    <header class="site-header">
+      <a class="brand" href="index.html"><span class="logo">W</span><span>웹디자인개발기능사</span></a>
+      <div class="header-actions">
+        <nav class="top-nav" aria-label="주요 메뉴">
+          <a href="index.html">홈</a>
+          <a href="quiz.html?mode=random">랜덤문제</a>
+          <a href="quiz.html?mode=frequent">빈출문제</a>
+          <a href="quiz.html?mode=round">모의고사</a>
+          <a href="summary.html" class="active">요약노트</a>
+          <a href="quiz.html?mode=wrong">오답노트</a>
+        </nav>
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="테마 전환">🌙</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="summary-hero">
+        <div>
+          <span class="eyebrow">EXAM ESSENTIALS · 2025 신출제기준 반영</span>
+          <h1>디자인 원리부터 UX·저작권까지<br /><em>합격 핵심 요약노트</em></h1>
+          <p>2012~2016년 기출에서 지금도 유효한 디자인 원리·색채학·웹그래픽스 기초를 정리하고, 2025년부터 새로 강화된 <b>UX·프로토타입·와이어프레임·사용성 테스트·저작권</b>까지 새 출제기준 그대로 정리했습니다.</p>
+        </div>
+        <div class="summary-score-card">
+          <span>시험 기준(2025~)</span>
+          <strong>60<small>문항</small></strong>
+          <p>1시간 / 객관식 4지택1<br />100점 만점 60점 이상 합격</p>
+        </div>
+      </section>
+
+      <div class="summary-notice">
+        <strong>합격 전략</strong>
+        <span>단일 필기과목(웹디자인구현·웹페이지제작) 60문항 중 36개 이상만 맞히면 합격입니다. 옛 기출이 풍부한 디자인 원리·색채(조색/배색)·웹그래픽스에서 확실히 득점하고, 신설된 UX/프로토타입·사용성테스트·저작권은 정의와 개념 구분 위주로 잡으세요!</span>
+      </div>
+
+      <div class="plain-box">
+        <b class="pb-label">💡 요약노트 200% 활용법</b>
+        <p>1. <b>파란 박스(쉽게 말하면)</b>: 낯선 디자인·색채 용어를 생활 속 비유로 먼저 감을 잡습니다.<br />
+        2. <b>오렌지 박스(기출 함정)</b>: 반복되는 오답 패턴을 짚어줍니다.<br />
+        3. <b>남색 박스(암기 치트키)</b>: 색상·개념 비교를 압축 정리합니다.<br />
+        4. <b><span class="badge-new">★최신개정</span> 표시</b>: 2025년 새 출제기준에서 신설/강화된 영역입니다. 과거 기출에는 없었지만 새로 반드시 챙겨야 합니다.<br />
+        5. <b>마지막 암기장(15장)</b>: 시험장 입실 후 10분 최종 점검용입니다.</p>
+      </div>
+
+      <!-- 상단 고정 목차 (TOC) -->
+      <nav class="toc summary-toc" aria-label="요약노트 목차">
+        <a href="#intro">0. 시험 개요</a>
+        <a href="#principle">1. 디자인 원리</a>
+        <a href="#illusion">2. 착시·형태지각</a>
+        <a href="#colorbase">3. 색의 기초</a>
+        <a href="#contrast">4. 색의 대비·조화</a>
+        <a href="#munsell">5. 먼셀 표색계</a>
+        <a href="#mixing">6. 조색(색 혼합)</a>
+        <a href="#scheme">7. 배색</a>
+        <a href="#ux">8. UX·프로토타입</a>
+        <a href="#wireframe">9. 와이어프레임·스토리보드</a>
+        <a href="#usability">10. 사용성 테스트</a>
+        <a href="#copyright">11. 저작권·라이선스</a>
+        <a href="#webgraphic">12. 웹그래픽스 기초</a>
+        <a href="#process">13. 웹디자인 프로세스</a>
+        <a href="#internet">14. 인터넷·웹 기초</a>
+        <a href="#last">15. 파이널 암기장</a>
+      </nav>
+
+      <!-- 0. 시험 개요 -->
+      <section class="summary-section high-yield" id="intro">
+        <div class="section-kicker">00 · 시험 안내</div>
+        <h2>2025년 개정 출제기준, 무엇이 바뀌었나</h2>
+        <p class="lead">웹디자인개발기능사(구 웹디자인기능사)는 디자인 원리·색채학이라는 변함없는 뼈대에, UX 디자인 프로세스(프로토타입·와이어프레임·사용성테스트)가 정식으로 추가되었습니다.</p>
+
+        <table>
+          <thead>
+            <tr><th>과거(~2016) 3과목 체계</th><th>2025~ 새 출제기준</th><th>변화</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>디자인 일반</td><td>5. 조색, 6. 배색, 3. 디자인구성요소설계</td><td>착시·색채·디자인원리 등 <b>거의 그대로 유지</b>, 색채 영역이 더 세분화</td></tr>
+            <tr><td>웹그래픽스 디자인</td><td>3·4. 디자인구성요소·콘텐츠 구현</td><td>해상도·벡터/비트맵·타이포그래피 등 <b>기초 이론은 유지</b>, Flash 등 죽은 기술은 폐기</td></tr>
+            <tr><td>인터넷 일반</td><td>4. 구현 및 응용 &gt; 웹 프로그래밍 지식(인식 수준)</td><td>OSI·TCP/IP·HTML 기초는 유지, 특정 구형 브라우저/HTML4 세부 문법은 비중 축소</td></tr>
+            <tr><td><em>(과거 출제 없음)</em></td><td>1·2. 프로토타입 기초데이터·제작·사용성테스트</td><td><b>신설 <span class="badge-new">★최신개정</span></b> — UX 개념, 로우파이/하이파이 프로토타입, 사용성 테스트 방법론</td></tr>
+            <tr><td><em>(과거 출제 없음)</em></td><td>3. 스토리보드 설계·제작(와이어프레임)</td><td><b>신설 <span class="badge-new">★최신개정</span></b> — 와이어프레임, UI 설계, 스토리보드</td></tr>
+            <tr><td><em>(과거 출제 없음)</em></td><td>1. 저작권, 7. 프로젝트 자료정리</td><td><b>신설 <span class="badge-new">★최신개정</span></b> — 저작권/CCL 라이선스, 산출물 자료정리</td></tr>
+          </tbody>
+        </table>
+
+        <div class="memory-box">
+          <b>시험시간 1시간 · 60문항 · 4지택1 · 100점 만점 60점 이상 합격</b>
+          <span>과목 통합으로 과목별 과락(40점) 기준이 없습니다</span>
+        </div>
+      </section>
+
+      <!-- 1. 디자인 원리 -->
+      <section class="summary-section high-yield" id="principle">
+        <div class="section-kicker">03 · 디자인구성요소설계</div>
+        <h2>디자인의 원리와 조건</h2>
+        <p class="lead">디자인 일반 과목의 최다 빈출 영역으로, 지금도 그대로 출제됩니다.</p>
+
+        <table>
+          <thead><tr><th>디자인 원리</th><th>의미</th></tr></thead>
+          <tbody>
+            <tr><td><b>통일(Unity)</b></td><td>전체 디자인 요소가 하나로 조화롭게 느껴지는 것</td></tr>
+            <tr><td><b>균형(Balance)</b></td><td>시각적 무게감의 안정 (대칭/비대칭 균형)</td></tr>
+            <tr><td><b>비례(Proportion)</b></td><td>부분과 부분, 부분과 전체 사이의 크기 비율 (황금비 등)</td></tr>
+            <tr><td><b>강조(Emphasis)</b></td><td>특정 부분을 시각적으로 두드러지게 하는 것</td></tr>
+            <tr><td><b>율동/리듬(Rhythm)</b></td><td>반복·점증 등으로 시각적 움직임을 느끼게 하는 것</td></tr>
+            <tr><td><b>대비/조화(Contrast/Harmony)</b></td><td>차이를 통한 강조 / 유사함을 통한 통일감</td></tr>
+          </tbody>
+        </table>
+
+        <div class="worked-example">
+          <b>디자인의 4대 조건</b>
+          <p>
+            <b>합목적성</b>(실용성, 목적에 맞는 기능) · <b>심미성</b>(아름다움) · <b>독창성</b>(창의성, 개성) · <b>경제성</b>(효율적 비용)<br />
+            <mark>"디자인의 조건 중 합목적성에 해당하는 것은?" → 항상 실용적 기능/목적 부합 관련 선택지가 정답</mark>
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. 착시·형태지각 -->
+      <section class="summary-section" id="illusion">
+        <div class="section-kicker">03 · 디자인구성요소설계</div>
+        <h2>착시(Optical Illusion)와 형태 지각</h2>
+        <ul class="key-list">
+          <li><b>착시</b>: 실제 형태·크기·색과 다르게 인지되는 시각적 오류 현상 (예: 같은 길이의 선이 화살표 방향에 따라 다르게 보이는 뮐러라이어 착시).</li>
+          <li><b>게슈탈트(형태) 원리</b>: 근접성(가까운 요소를 하나로 인식), 유사성(비슷한 것을 하나로 묶어 인식), 폐쇄성(불완전한 형태를 완전한 형태로 인식), 연속성(흐름을 따라 인식).</li>
+          <li><b>질감(Texture)</b>: 시각적 질감(눈으로만 느끼는 표면느낌)과 촉각적 질감(실제 만졌을 때의 표면느낌)으로 구분.</li>
+        </ul>
+      </section>
+
+      <!-- 3. 색의 기초 -->
+      <section class="summary-section high-yield" id="colorbase">
+        <div class="section-kicker">05 · 조색</div>
+        <h2>색의 3속성과 색 지각의 3요소</h2>
+
+        <table>
+          <thead><tr><th>색의 3속성</th><th>의미</th></tr></thead>
+          <tbody>
+            <tr><td><b>색상(Hue)</b></td><td>빨강, 파랑 등 색 그 자체의 종류</td></tr>
+            <tr><td><b>명도(Value/Lightness)</b></td><td>색의 밝고 어두운 정도</td></tr>
+            <tr><td><b>채도(Chroma/Saturation)</b></td><td>색의 선명하고 탁한 정도(순수한 정도)</td></tr>
+          </tbody>
+        </table>
+
+        <ul class="key-list">
+          <li><b>색 지각(색 자각)의 3요소</b>: 광원(빛) · 물체 · 눈(관찰자) — 이 세 가지가 모두 있어야 색을 인지할 수 있음.</li>
+          <li><b>무채색</b>: 색상과 채도가 없고 명도만 있는 색 (흰색·회색·검은색).</li>
+        </ul>
+      </section>
+
+      <!-- 4. 색의 대비·조화 -->
+      <section class="summary-section high-yield" id="contrast">
+        <div class="section-kicker">05 · 조색</div>
+        <h2>색의 대비와 배색 조화</h2>
+
+        <table>
+          <thead><tr><th>대비 종류</th><th>현상</th></tr></thead>
+          <tbody>
+            <tr><td><b>색상대비</b></td><td>서로 다른 색상이 인접할 때 색상 차이가 더 크게 느껴짐</td></tr>
+            <tr><td><b>명도대비</b></td><td>명도가 다른 색이 인접할 때 명도 차이가 더 크게 느껴짐</td></tr>
+            <tr><td><b>채도대비</b></td><td>채도가 다른 색이 인접할 때 채도 차이가 더 크게 느껴짐</td></tr>
+            <tr><td><b>보색대비</b></td><td>색상환에서 정반대(보색)에 위치한 색끼리 인접할 때 서로 뚜렷하고 강하게 보임</td></tr>
+            <tr><td><b>동시대비</b></td><td>두 가지 이상의 색을 동시에 볼 때 일어나는 대비</td></tr>
+            <tr><td><b>연속대비</b></td><td>한 색을 본 뒤 다른 색을 보았을 때 시간차를 두고 일어나는 대비</td></tr>
+          </tbody>
+        </table>
+
+        <div class="memory-box">
+          <b>동일 색상의 명도 단계적 배색 = 그러데이션(Gradation) 조화</b>
+          <span>하나의 색상에 여러 명도를 단계적으로 동시에 배색해 얻는 조화</span>
+        </div>
+      </section>
+
+      <!-- 5. 먼셀 표색계 -->
+      <section class="summary-section" id="munsell">
+        <div class="section-kicker">05 · 조색</div>
+        <h2>먼셀(Munsell) 표색계와 색체계</h2>
+        <ul class="key-list">
+          <li><b>먼셀 표색계</b>: 색상(Hue)·명도(Value)·채도(Chroma) 순으로 <b>HV/C</b> 형식 표기 (예: 5R 4/14). 한국산업표준(KS)의 색채 교육 기준.</li>
+          <li><b>색상환(Color Circle)</b>: 먼셀은 10가지 기본색(R,YR,Y,GY,G,BG,B,PB,P,RP)을 원형으로 배치.</li>
+          <li><b>PCCS 색체계</b>: 일본색채연구소가 개발, 톤(Tone) 중심의 색채계획에 특화된 색체계.</li>
+        </ul>
+      </section>
+
+      <!-- 6. 조색(색 혼합) -->
+      <section class="summary-section high-yield" id="mixing">
+        <div class="section-kicker">05 · 조색 <span class="badge-new">★최신개정 강화</span></div>
+        <h2>가법혼합과 감법혼합</h2>
+
+        <table>
+          <thead><tr><th>혼합 방식</th><th>원리</th><th>예시</th></tr></thead>
+          <tbody>
+            <tr><td><b>가법혼합(Additive)</b></td><td>색광을 더할수록 <b>밝아짐</b> → 모두 더하면 흰색(백색광)</td><td>RGB(빛의 3원색), 모니터·TV 화면</td></tr>
+            <tr><td><b>감법혼합(Subtractive)</b></td><td>색료를 더할수록 <b>어두워짐</b> → 모두 섞으면 검정에 가까움</td><td>CMY(색료의 3원색), 인쇄·물감</td></tr>
+          </tbody>
+        </table>
+
+        <div class="exam-trap">
+          <b>기출 함정</b><br />
+          "모니터 화면의 색 표현 방식은?" → <b>가법혼합(RGB)</b>. "인쇄물의 색 표현 방식은?" → <b>감법혼합(CMYK)</b>. 웹디자이너는 항상 RGB(가법혼합) 기준으로 작업한다는 점을 기억하세요.
+        </div>
+      </section>
+
+      <!-- 7. 배색 -->
+      <section class="summary-section high-yield" id="scheme">
+        <div class="section-kicker">06 · 배색 <span class="badge-new">★최신개정 강화</span></div>
+        <h2>배색 형식과 색채 계획</h2>
+
+        <ul class="key-list">
+          <li><b>동일색 배색</b>: 같은 색상, 명도·채도만 다르게 — 통일감 있고 안정적.</li>
+          <li><b>유사색 배색</b>: 색상환에서 가까운 색끼리 — 자연스럽고 조화로움.</li>
+          <li><b>대조색(반대색) 배색</b>: 색상환에서 먼 색끼리 — 강렬하고 개성있는 느낌.</li>
+          <li><b>톤(Tone) 배색</b>: 같은 톤(명도·채도 조합)의 색끼리 배색 — 차분하고 정돈된 느낌.</li>
+        </ul>
+
+        <p><b>색의 심리적 작용</b>: 따뜻한 색(빨강·주황)은 식욕을 돋우고 활동적인 느낌, 차가운 색(파랑·초록)은 안정·신뢰의 느낌을 줍니다. <mark>"제과점 홈페이지에 적합한 색채 계획"</mark> 같은 문제는 항상 따뜻한 색 계열을 정답으로 유도합니다.</p>
+      </section>
+
+      <!-- 8. UX·프로토타입 -->
+      <section class="summary-section high-yield" id="ux">
+        <div class="section-kicker">01·02 · 프로토타입 기초데이터·제작 <span class="badge-new">★최신개정</span></div>
+        <h2>UX(User Experience)와 프로토타입</h2>
+        <p class="lead">2025년 새 출제기준의 핵심 신설 영역입니다. 과거 기출에는 전혀 없었으므로 정의부터 확실히 잡아야 합니다.</p>
+
+        <table>
+          <thead><tr><th>용어</th><th>의미</th></tr></thead>
+          <tbody>
+            <tr><td><b>UX(사용자 경험)</b></td><td>사용자가 제품·서비스를 이용하며 느끼는 전체적인 경험·만족도</td></tr>
+            <tr><td><b>UI(사용자 인터페이스)</b></td><td>사용자가 실제로 조작하는 화면·버튼 등 접점 요소</td></tr>
+          </tbody>
+        </table>
+
+        <div class="exam-trap">
+          <b>기출 함정: 로우파이 vs 하이파이 프로토타입</b><br />
+          <b>로우파이(Low-fidelity)</b> 프로토타입은 종이 스케치처럼 <b>빠르고 저렴하게</b> 초기 아이디어를 검증하는 용도이고, <b>하이파이(High-fidelity)</b> 프로토타입은 실제 색상·인터랙션까지 반영해 <b>완성품과 유사</b>하게 만들어 후반 검증에 사용합니다. "빠른 초기 검증"이 나오면 로우파이가 정답입니다.
+        </div>
+
+        <p><b>프로토타입의 목적</b>: 실제 개발에 들어가기 전, 저비용으로 아이디어를 시각화하고 사용성 문제를 미리 발견하기 위함입니다.</p>
+      </section>
+
+      <!-- 9. 와이어프레임·스토리보드 -->
+      <section class="summary-section high-yield" id="wireframe">
+        <div class="section-kicker">03 · 스토리보드 설계·제작 <span class="badge-new">★최신개정</span></div>
+        <h2>와이어프레임과 스토리보드</h2>
+
+        <div class="memory-box">
+          <b>완성도 순서: 와이어프레임 &lt; 목업(Mockup) &lt; 프로토타입</b>
+          <span>뼈대만(레이아웃) → 색상/디자인 입힘 → 실제 동작(인터랙션)까지</span>
+        </div>
+
+        <ul class="key-list">
+          <li><b>와이어프레임(Wireframe)</b>: 색상·디자인 요소를 배제하고 화면의 <b>배치와 기능(레이아웃)</b>만 뼈대로 표현한 설계도.</li>
+          <li><b>목업(Mockup)</b>: 와이어프레임에 실제 색상·이미지 등 시각 디자인을 입힌 정적인 시안.</li>
+          <li><b>스토리보드(Storyboard)</b>: 화면 간의 <b>전환·흐름(Flow)</b>과 인터랙션을 순서대로 표현한 설계 문서.</li>
+        </ul>
+      </section>
+
+      <!-- 10. 사용성 테스트 -->
+      <section class="summary-section high-yield" id="usability">
+        <div class="section-kicker">02 · 사용성 테스트 <span class="badge-new">★최신개정</span></div>
+        <h2>사용성 테스트 방법론</h2>
+
+        <table>
+          <thead><tr><th>기법</th><th>특징</th></tr></thead>
+          <tbody>
+            <tr><td><b>사용자 인터뷰</b></td><td>사용자와 직접 대화하며 정성적으로 니즈 파악</td></tr>
+            <tr><td><b>설문조사</b></td><td>다수 사용자에게 정량적 데이터 수집</td></tr>
+            <tr><td><b>A/B 테스트</b></td><td>두 가지 버전(A, B)을 실제 사용자에게 노출시켜 <b>정량적으로 비교</b></td></tr>
+            <tr><td><b>휴리스틱 평가</b></td><td>UX 전문가가 사전 정의된 원칙(체크리스트)에 따라 평가 (일반 사용자 없이도 가능)</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 11. 저작권 -->
+      <section class="summary-section high-yield" id="copyright">
+        <div class="section-kicker">01 · 저작권 <span class="badge-new">★최신개정</span></div>
+        <h2>저작권과 CCL 라이선스</h2>
+
+        <ul class="key-list">
+          <li><b>저작인격권</b>: 저작자의 명예·인격을 보호하는 권리 (공표권·성명표시권·동일성유지권) — 타인에게 양도 불가.</li>
+          <li><b>저작재산권</b>: 저작물을 경제적으로 이용할 권리 (복제권·배포권 등) — 양도·이용허락 가능.</li>
+        </ul>
+
+        <div class="worked-example">
+          <b>CCL(Creative Commons License) 4대 구성요소</b>
+          <p>
+            <b>저작자표시(BY)</b>: 저작자를 반드시 표시<br />
+            <b>비영리(NC)</b>: 영리 목적으로 이용 금지<br />
+            <b>변경금지(ND)</b>: 원저작물을 변경하지 않고 그대로만 이용<br />
+            <b>동일조건변경허락(SA)</b>: 변경 시 원저작물과 동일한 라이선스로 배포
+          </p>
+        </div>
+      </section>
+
+      <!-- 12. 웹그래픽스 기초 -->
+      <section class="summary-section high-yield" id="webgraphic">
+        <div class="section-kicker">04 · 콘텐츠 구현·구성</div>
+        <h2>웹그래픽스 기초: 해상도·벡터·비트맵</h2>
+
+        <table>
+          <thead><tr><th>구분</th><th>벡터(Vector)</th><th>비트맵(Bitmap)</th></tr></thead>
+          <tbody>
+            <tr><td>구성 단위</td><td>수학적 좌표·선(Path)</td><td>픽셀(화소)</td></tr>
+            <tr><td>확대 시</td><td>깨지지 않고 매끈함</td><td>계단현상(깨짐) 발생</td></tr>
+            <tr><td>대표 포맷/툴</td><td>SVG, AI (일러스트레이터)</td><td>JPG/PNG/GIF, PSD (포토샵)</td></tr>
+          </tbody>
+        </table>
+
+        <ul class="key-list">
+          <li><b>해상도(Resolution)</b>: 단위 면적당 픽셀의 수(예: dpi, ppi) — 해상도가 높을수록 더 선명하지만 파일 용량은 커짐.</li>
+          <li><b>히스토그램(Histogram)</b>: 이미지의 밝기(명도) 분포를 그래프로 나타낸 것 — 포토샵에서 노출·톤 보정에 활용.</li>
+          <li><b>포토샵(Photoshop) 전용 파일 포맷</b>: <code>.psd</code></li>
+        </ul>
+      </section>
+
+      <!-- 13. 웹디자인 프로세스 -->
+      <section class="summary-section" id="process">
+        <div class="section-kicker">전체 프로세스</div>
+        <h2>웹디자인 프로세스와 타이포그래피</h2>
+
+        <div class="worked-example">
+          <b>웹디자인 프로세스 순서</b>
+          <p>1. 프로젝트 기획(목표·타겟 설정) → 2. 정보설계(IA) → 3. 스토리보드/와이어프레임 → 4. 디자인 시안 제작 → 5. 퍼블리싱/구현 → 6. 테스트 및 배포</p>
+        </div>
+
+        <p><b>타이포그래피(Typography)</b>: 글자를 활용한 디자인 — 가독성(읽기 쉬움)과 판독성(빠르게 인지되는 정도)을 모두 고려해야 하며, 본문은 가독성을, 제목/로고는 판독성·심미성을 더 중시하는 경향이 있습니다.</p>
+      </section>
+
+      <!-- 14. 인터넷·웹 기초 -->
+      <section class="summary-section high-yield" id="internet">
+        <div class="section-kicker">04 · 구현 및 응용</div>
+        <h2>인터넷·웹 기초 지식</h2>
+
+        <ul class="key-list">
+          <li><b>방화벽(Firewall)</b>: 내부·외부 네트워크를 격리해 인터넷 보안 위협을 차단하는 시스템.</li>
+          <li><b>이메일 송신 프로토콜</b>: <b>SMTP</b> (수신은 POP3/IMAP).</li>
+          <li><b>TCP/IP 4계층</b>: 네트워크 접근 계층 - 인터넷 계층 - 전송 계층 - 응용 계층.</li>
+          <li><b>웹브라우저의 기본 기능</b>: HTML 렌더링, 북마크, 히스토리 관리, 쿠키/캐시 관리 등 (프로그램 코드 편집 기능은 포함 안 됨).</li>
+        </ul>
+      </section>
+
+      <!-- 15. 파이널 암기장 -->
+      <section class="summary-section final-sheet" id="last">
+        <div class="section-kicker">15 · LAST CHECK</div>
+        <h2>시험장 들어가기 전 마지막 10분 초압축 암기장</h2>
+        <p class="lead">헷갈리기 쉬운 정의·비교를 한눈에 최종 점검하세요.</p>
+
+        <div class="last-grid">
+          <div>
+            <b>색의 3속성</b>
+            <p>색상(Hue)·명도(Value)<br />채도(Chroma)<br />색지각 3요소=광원·물체·눈</p>
+          </div>
+          <div>
+            <b>혼합 방식</b>
+            <p>가법혼합=RGB(밝아짐)<br />감법혼합=CMY(어두워짐)<br />모니터=가법, 인쇄=감법</p>
+          </div>
+          <div>
+            <b>완성도 순서</b>
+            <p>와이어프레임(뼈대) &lt;<br />목업(디자인 입힘) &lt;<br />프로토타입(실제동작)</p>
+          </div>
+          <div>
+            <b>프로토타입 종류</b>
+            <p>로우파이=빠름·저비용·초기<br />하이파이=완성품 유사·후반</p>
+          </div>
+          <div>
+            <b>사용성 테스트</b>
+            <p>인터뷰=정성적<br />A/B테스트=정량적 비교<br />휴리스틱=전문가 체크리스트</p>
+          </div>
+          <div>
+            <b>CCL 라이선스</b>
+            <p>BY=저작자표시<br />NC=비영리 · ND=변경금지<br />SA=동일조건변경허락</p>
+          </div>
+          <div>
+            <b>벡터 vs 비트맵</b>
+            <p>벡터=좌표,확대해도 매끈<br />비트맵=픽셀,확대시 깨짐<br />psd=포토샵 전용포맷</p>
+          </div>
+          <div>
+            <b>디자인 4대 조건</b>
+            <p>합목적성·심미성<br />독창성·경제성</p>
+          </div>
+        </div>
+
+        <div class="final-cta">
+          <div>
+            <b>개념 정리를 마쳤다면 이제 실전 모의고사를 풀어보세요!</b>
+            <span>직접 문제를 풀며 틀린 부분은 해당 섹션으로 돌아와 다시 확인하면 완벽합니다.</span>
+          </div>
+          <a class="btn" href="quiz.html?mode=round">회차별 실전 모의고사 풀기</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      웹디자인개발기능사 필기 합격 대비 요약노트 · 2025 개정 출제기준 반영
+    </footer>
+  </div>
+
+  <script src="js/theme.js"></script>
+  <script src="js/summary-footnotes.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="정보기기운용기능사 필기 합격 보장 핵심 요약노트 - 2026년 개정 출제기준(스위치·라우터·VLAN/ACL/NAT·무선랜·가상화) 완벽 반영" />
+  <title>기출 핵심 요약노트 · 정보기기운용기능사</title>
+  <link rel="stylesheet" href="css/style.css?v=20260913-1" />
+  <script>(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+</head>
+<body>
+  <div class="wrap summary-wrap">
+    <header class="site-header">
+      <a class="brand" href="index.html"><span class="logo">N</span><span>정보기기운용기능사</span></a>
+      <div class="header-actions">
+        <nav class="top-nav" aria-label="주요 메뉴">
+          <a href="index.html">홈</a>
+          <a href="quiz.html?mode=random">랜덤문제</a>
+          <a href="quiz.html?mode=frequent">빈출문제</a>
+          <a href="quiz.html?mode=round">모의고사</a>
+          <a href="summary.html" class="active">요약노트</a>
+          <a href="quiz.html?mode=wrong">오답노트</a>
+        </nav>
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="테마 전환">🌙</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="summary-hero">
+        <div>
+          <span class="eyebrow">EXAM ESSENTIALS · 2026 신출제기준 반영</span>
+          <h1>OSI부터 라우터·무선랜·클라우드까지<br /><em>합격 핵심 요약노트</em></h1>
+          <p>2007~2011년 기출에서 지금도 유효한 OSI 7계층·LAN·보안 기초를 추리고, 2026년부터 <b>네트워크 엔지니어 실무형(스위치/라우터 CLI·라우팅·VLAN/ACL/NAT·무선랜·서버 가상화·클라우드)</b>으로 전면 개편된 새 출제기준 그대로 정리했습니다.</p>
+        </div>
+        <div class="summary-score-card">
+          <span>시험 기준(2026~)</span>
+          <strong>60<small>문항</small></strong>
+          <p>1시간 / 객관식 4지택1<br />100점 만점 60점 이상 합격</p>
+        </div>
+      </section>
+
+      <div class="summary-notice">
+        <strong>합격 전략</strong>
+        <span>단일 필기과목(네트워크 구성·정보기기 유지보수·정보기기 설치운영) 60문항 중 36개 이상만 맞히면 합격입니다. 옛 기출이 남아있는 OSI·LAN·보안 기초에서 확실히 득점하고, 신설된 스위치/라우터 CLI·서브네팅·VLAN/ACL/NAT·무선랜은 개념과 계산 공식 위주로 잡으세요!</span>
+      </div>
+
+      <div class="plain-box">
+        <b class="pb-label">💡 요약노트 200% 활용법</b>
+        <p>1. <b>파란 박스(쉽게 말하면)</b>: 낯선 네트워크 용어를 생활 속 비유로 먼저 감을 잡습니다.<br />
+        2. <b>오렌지 박스(기출 함정)</b>: 반복되는 오답 패턴을 짚어줍니다.<br />
+        3. <b>남색 박스(암기 치트키)</b>·<b>계산 예시 박스</b>: 서브네팅 등 공식과 계산 순서를 압축 정리합니다.<br />
+        4. <b><span class="badge-new">★최신개정</span> 표시</b>: 2026년 새 출제기준에서 신설/강화된 영역입니다. 과거 기출에는 없었지만 새로 반드시 챙겨야 합니다.<br />
+        5. <b>마지막 암기장(15장)</b>: 시험장 입실 후 10분 최종 점검용입니다.</p>
+      </div>
+
+      <!-- 상단 고정 목차 (TOC) -->
+      <nav class="toc summary-toc" aria-label="요약노트 목차">
+        <a href="#intro">0. 시험 개요</a>
+        <a href="#osi">1. OSI 7계층</a>
+        <a href="#lan">2. LAN·이더넷</a>
+        <a href="#cli">3. 스위치·라우터 CLI</a>
+        <a href="#routing">4. 라우팅 프로토콜</a>
+        <a href="#subnet">5. IP 서브네팅</a>
+        <a href="#redundancy">6. 이중화</a>
+        <a href="#remote">7. 원격접속·패스워드</a>
+        <a href="#vlan">8. VLAN·ACL·NAT</a>
+        <a href="#wifi">9. 무선랜 표준</a>
+        <a href="#wifisec">10. 무선랜 보안</a>
+        <a href="#netops">11. 네트워크 운영관리</a>
+        <a href="#terminal">12. OS 명령어·케이블</a>
+        <a href="#virt">13. 서버 가상화·클라우드</a>
+        <a href="#security">14. 방화벽·보안위협</a>
+        <a href="#last">15. 파이널 암기장</a>
+      </nav>
+
+      <!-- 0. 시험 개요 -->
+      <section class="summary-section high-yield" id="intro">
+        <div class="section-kicker">00 · 시험 안내</div>
+        <h2>2026년 개정 출제기준, 무엇이 바뀌었나</h2>
+        <p class="lead">정보기기운용기능사는 2026년부터 사실상 네트워크 엔지니어 기초 자격증으로 재편되었습니다. 옛 시험(전산기초이론·정보기기운용·정보통신업무규정)의 상당수가 폐기되고, OSI·LAN을 뼈대로 스위치/라우터 실무가 새로 추가되었습니다.</p>
+
+        <table>
+          <thead>
+            <tr><th>과거(~2011) 4과목 체계</th><th>2026~ 새 출제기준</th><th>변화</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>전산기초이론</td><td><em>(과목 자체가 사라짐)</em></td><td><b>완전 폐기</b></td></tr>
+            <tr><td>정보통신업무규정</td><td><em>(과목 자체가 사라짐)</em></td><td><b>완전 폐기</b></td></tr>
+            <tr><td>정보기기운용 (전력계산·가전·OA 특화)</td><td>6·7. HW 단말장치/서버운용</td><td>전구·UPS 전력계산 등은 폐기, <b>Windows/Linux 명령어·케이블·가상화</b>만 현대화되어 유지</td></tr>
+            <tr><td>정보통신일반 (아날로그 통신공학)</td><td>5. 네트워크 프로토콜 분석</td><td>변조방식·광섬유 세부구조 등은 폐기, <b>OSI 7계층·LAN·보안 기초</b>만 남음</td></tr>
+            <tr><td><em>(과거 출제 없음)</em></td><td>1. L2·L3 스위치 구축</td><td><b>신설 <span class="badge-new">★최신개정</span></b> — 스위치/라우터 CLI, 라우팅, 서브네팅, 이중화, VLAN/ACL/NAT</td></tr>
+            <tr><td><em>(과거 출제 없음)</em></td><td>3. 무선랜 구축</td><td><b>신설 <span class="badge-new">★최신개정</span></b> — 802.11 표준, WLC, 무선보안(WPA2/3)</td></tr>
+            <tr><td><em>(과거 출제 없음)</em></td><td>4. 네트워크 운영관리, 7. 서버운용</td><td><b>신설 <span class="badge-new">★최신개정</span></b> — NMS/트래픽, 서버 가상화·클라우드</td></tr>
+          </tbody>
+        </table>
+
+        <div class="memory-box">
+          <b>시험시간 1시간 · 60문항 · 4지택1 · 100점 만점 60점 이상 합격</b>
+          <span>과목 통합으로 과목별 과락(40점) 기준이 없습니다</span>
+        </div>
+      </section>
+
+      <!-- 1. OSI 7계층 -->
+      <section class="summary-section high-yield" id="osi">
+        <div class="section-kicker">05 · 네트워크 프로토콜 분석</div>
+        <h2>OSI 7계층 참조모델</h2>
+        <p class="lead">옛 정보통신일반 시절부터 변함없이 출제되는 최다 빈출 개념입니다.</p>
+
+        <table>
+          <thead><tr><th>계층</th><th>이름</th><th>역할</th><th>대표 장비/프로토콜</th></tr></thead>
+          <tbody>
+            <tr><td>7</td><td>응용(Application)</td><td>사용자 응용 서비스</td><td>HTTP, FTP, SMTP</td></tr>
+            <tr><td>6</td><td>표현(Presentation)</td><td>데이터 형식 변환, 암호화/압축</td><td>인코딩, SSL</td></tr>
+            <tr><td>5</td><td>세션(Session)</td><td>통신 세션 연결·관리·종료</td><td>세션 유지</td></tr>
+            <tr><td>4</td><td>전송(Transport)</td><td>종단간 신뢰성 있는 전송</td><td>TCP, UDP</td></tr>
+            <tr><td>3</td><td>네트워크(Network)</td><td>경로 설정(라우팅), 논리 주소</td><td>IP, 라우터</td></tr>
+            <tr><td>2</td><td>데이터링크(Data Link)</td><td>인접 노드간 전송, 오류검출, MAC</td><td>스위치, 브리지</td></tr>
+            <tr><td>1</td><td>물리(Physical)</td><td>전기적 신호, 케이블 규격</td><td>허브, 리피터</td></tr>
+          </tbody>
+        </table>
+
+        <div class="memory-box">
+          <b>암기 치트키: 물데네 전세표응 (아래→위)</b>
+          <span>물리-데이터링크-네트워크-전송-세션-표현-응용</span>
+        </div>
+
+        <div class="exam-trap">
+          <b>기출 함정</b><br />
+          "하위 계층"을 물으면 보통 <b>물리·데이터링크·네트워크(1~3계층)</b>를 의미합니다. FTP·HTTP는 응용계층(7), 암호화/압축은 표현계층(6)에 속함을 혼동하지 마세요.
+        </div>
+      </section>
+
+      <!-- 2. LAN·이더넷 -->
+      <section class="summary-section high-yield" id="lan">
+        <div class="section-kicker">05 · 네트워크 프로토콜 분석</div>
+        <h2>LAN·이더넷 표준</h2>
+
+        <ul class="key-list">
+          <li><b>LAN 특징</b>: 좁은 지역(구내), 높은 전송속도, 낮은 에러율, 사설 소유·관리.</li>
+          <li><b>LAN 토폴로지</b>: 버스형(공통 회선 공유), 스타형(중앙 허브/스위치 경유, 장애 격리 용이), 링형(순환 구조), 망형(모든 노드가 서로 직접 연결, 신뢰성 최고).</li>
+          <li><b>10-Base-T</b>: "10"은 <b>전송속도 10Mbps</b>, "Base"는 베이스밴드 방식, "T"는 UTP 케이블(Twisted pair)을 의미.</li>
+          <li><b>Fast Ethernet / 이더넷</b>: 100Mbps 이더넷 표준. CSMA/CD 방식으로 매체 접근을 제어(충돌 감지 후 재전송).</li>
+        </ul>
+
+        <div class="worked-example">
+          <b>망형(Mesh) 네트워크 회선 수 계산</b>
+          <p>단말기 n개를 모두 망형으로 연결할 때 필요한 최소 회선 수 = <code>n(n-1)/2</code><br />예) 단말기 12개 → 12×11/2 = <b>66회선</b></p>
+        </div>
+      </section>
+
+      <!-- 3. 스위치·라우터 CLI -->
+      <section class="summary-section high-yield" id="cli">
+        <div class="section-kicker">01 · L2·L3 스위치 구축 <span class="badge-new">★최신개정</span></div>
+        <h2>스위치·라우터 기본 명령어(Cisco IOS)</h2>
+        <p class="lead">2026년 완전 신설된 실무형 영역입니다. Cisco IOS 표준 명령어 체계로 정리합니다.</p>
+
+        <table>
+          <thead><tr><th>모드</th><th>프롬프트</th><th>진입 명령</th></tr></thead>
+          <tbody>
+            <tr><td>사용자 모드</td><td><code>Router&gt;</code></td><td>로그인 직후 기본 상태</td></tr>
+            <tr><td>특권 모드</td><td><code>Router#</code></td><td><code>enable</code></td></tr>
+            <tr><td>전역 설정 모드</td><td><code>Router(config)#</code></td><td><code>configure terminal</code></td></tr>
+            <tr><td>인터페이스 설정 모드</td><td><code>Router(config-if)#</code></td><td><code>interface [인터페이스명]</code></td></tr>
+          </tbody>
+        </table>
+
+        <ul class="key-list">
+          <li><b>hostname [이름]</b>: 장비의 호스트명(장비이름) 설정 (전역 설정 모드)</li>
+          <li><b>ip address [IP] [서브넷마스크]</b>: 인터페이스에 IP 주소 부여 (인터페이스 설정 모드)</li>
+          <li><b>no shutdown</b>: 기본적으로 비활성화(shutdown) 상태인 인터페이스를 활성화</li>
+          <li><b>show running-config</b>: 현재 메모리(RAM)에 적용 중인 구성정보 확인</li>
+          <li><b>copy running-config startup-config</b> (또는 <code>write memory</code>): 현재 설정을 NVRAM에 저장해 재부팅 후에도 유지</li>
+        </ul>
+
+        <div class="exam-trap">
+          <b>기출 함정: L2 스위치 vs L3 스위치</b><br />
+          <b>L2 스위치</b>는 MAC 주소를 학습해 데이터링크 계층에서 프레임을 전달하는 반면, <b>L3 스위치(=라우터 기능 겸용)</b>는 IP 주소 기반으로 네트워크 계층에서 라우팅까지 수행할 수 있습니다.
+        </div>
+      </section>
+
+      <!-- 4. 라우팅 프로토콜 -->
+      <section class="summary-section high-yield" id="routing">
+        <div class="section-kicker">01 · L2·L3 스위치 구축 <span class="badge-new">★최신개정</span></div>
+        <h2>라우팅 프로토콜: 정적·RIP·OSPF·EIGRP</h2>
+
+        <table>
+          <thead><tr><th>구분</th><th>특징</th></tr></thead>
+          <tbody>
+            <tr><td><b>정적 라우팅(Static)</b></td><td>관리자가 직접 경로를 수동 설정. 소규모망에 적합, 변경 시 수작업 필요</td></tr>
+            <tr><td><b>RIP</b></td><td>거리벡터 방식, 홉 카운트(최대 15홉)로 최적 경로 결정, 소규모망용, 수렴 느림</td></tr>
+            <tr><td><b>OSPF</b></td><td>링크상태 방식, 대규모망에 적합, 수렴 빠름, 대역폭 등 종합 비용(Cost) 기준</td></tr>
+            <tr><td><b>EIGRP</b></td><td>Cisco 독자 개발, 거리벡터+링크상태 혼합형(하이브리드), 빠른 수렴</td></tr>
+          </tbody>
+        </table>
+
+        <p><b>이중화(Redundancy)</b>의 목적은 단일 장애점(Single Point of Failure)을 제거해 한 장비·경로가 고장나도 통신이 끊기지 않게 하는 것입니다. <b>HSRP(Cisco 독자)</b>·<b>VRRP(표준)</b>는 여러 라우터를 하나의 가상 IP·가상 라우터처럼 묶어, 주(Active) 라우터 장애 시 대기(Standby) 라우터가 즉시 대체하는 프로토콜입니다.</p>
+      </section>
+
+      <!-- 5. IP 서브네팅 -->
+      <section class="summary-section high-yield" id="subnet">
+        <div class="section-kicker">01 · L2·L3 스위치 구축 <span class="badge-new">★최신개정</span></div>
+        <h2>IP 주소관리와 서브네팅 계산</h2>
+
+        <div class="worked-example">
+          <b>서브넷 계산 핵심 공식</b>
+          <p>
+            사용 가능한 호스트 수 = <code>2ⁿ - 2</code> (n = 호스트 비트 수, -2는 네트워크주소·브로드캐스트주소 제외)<br />
+            예) /28(255.255.255.240) → 호스트비트 4개 → 2⁴-2 = <b>14개</b><br />
+            서브넷 개수 = <code>2ᵏ</code> (k = 네트워크 비트를 늘린 만큼의 서브넷 비트 수)
+          </p>
+        </div>
+
+        <table>
+          <thead><tr><th>CIDR</th><th>서브넷마스크</th><th>호스트 수</th></tr></thead>
+          <tbody>
+            <tr><td>/24</td><td>255.255.255.0</td><td>254개</td></tr>
+            <tr><td>/25</td><td>255.255.255.128</td><td>126개</td></tr>
+            <tr><td>/26</td><td>255.255.255.192</td><td>62개</td></tr>
+            <tr><td>/27</td><td>255.255.255.224</td><td>30개</td></tr>
+            <tr><td>/28</td><td>255.255.255.240</td><td>14개</td></tr>
+          </tbody>
+        </table>
+
+        <ul class="key-list">
+          <li><b>사설(Private) IP 대역</b>: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16</li>
+          <li><b>IP 클래스</b>: A(1~126, 앞 8비트 네트워크), B(128~191, 앞 16비트), C(192~223, 앞 24비트)</li>
+        </ul>
+      </section>
+
+      <!-- 6. 이중화 -->
+      <section class="summary-section" id="redundancy">
+        <div class="section-kicker">01 · L2·L3 스위치 구축 <span class="badge-new">★최신개정</span></div>
+        <h2>이중화(Redundancy) 프로토콜</h2>
+        <ul class="key-list">
+          <li><b>HSRP(Hot Standby Router Protocol)</b>: Cisco 독자 프로토콜, 하나의 가상 IP를 Active/Standby 라우터가 공유.</li>
+          <li><b>VRRP(Virtual Router Redundancy Protocol)</b>: 표준 프로토콜(RFC), 여러 벤더 장비 간 호환 가능.</li>
+          <li>이중화의 핵심 목적은 <b>가용성(Availability) 향상</b> — 장애 시에도 서비스가 끊기지 않도록 하는 것입니다.</li>
+        </ul>
+      </section>
+
+      <!-- 7. 원격접속·패스워드 -->
+      <section class="summary-section high-yield" id="remote">
+        <div class="section-kicker">02 · 네트워크 보안관리 <span class="badge-new">★최신개정</span></div>
+        <h2>원격접속(Telnet/SSH)과 패스워드 보안</h2>
+
+        <table>
+          <thead><tr><th>구분</th><th>Telnet</th><th>SSH</th></tr></thead>
+          <tbody>
+            <tr><td>암호화</td><td><b>평문 전송(암호화 없음)</b></td><td><b>암호화된 전송</b></td></tr>
+            <tr><td>보안성</td><td>낮음 (패스워드 노출 위험)</td><td>높음 (현재 표준으로 권장)</td></tr>
+            <tr><td>기본 포트</td><td>23</td><td>22</td></tr>
+          </tbody>
+        </table>
+
+        <div class="exam-trap">
+          <b>기출 함정</b><br />
+          "원격 관리자 접속 시 보안을 위해 사용해야 하는 것은?" → 항상 <b>SSH</b>가 정답입니다. Telnet은 패스워드가 그대로 노출되어 보안에 취약합니다.
+        </div>
+
+        <ul class="key-list">
+          <li><b>enable secret</b>: 특권모드 진입 패스워드를 <b>암호화하여</b> 저장 (권장)</li>
+          <li><b>enable password</b>: 특권모드 진입 패스워드를 평문으로 저장 (구형, 비권장)</li>
+        </ul>
+      </section>
+
+      <!-- 8. VLAN·ACL·NAT -->
+      <section class="summary-section high-yield" id="vlan">
+        <div class="section-kicker">01·02 · 스위치 구축/보안관리 <span class="badge-new">★최신개정</span></div>
+        <h2>VLAN·ACL·NAT 기본 구성</h2>
+
+        <table>
+          <thead><tr><th>기술</th><th>목적</th></tr></thead>
+          <tbody>
+            <tr><td><b>VLAN</b></td><td>하나의 물리적 스위치를 여러 개의 논리적 네트워크로 분리 — 브로드캐스트 도메인 축소, 보안·관리 용이</td></tr>
+            <tr><td><b>ACL(Access Control List)</b></td><td>지정된 규칙에 따라 특정 트래픽(IP·포트 등)을 허용/차단</td></tr>
+            <tr><td><b>NAT(Network Address Translation)</b></td><td>사설 IP ↔ 공인 IP를 변환 — 사설 IP 주소를 외부 인터넷과 통신 가능하게 해줌</td></tr>
+          </tbody>
+        </table>
+
+        <ul class="key-list">
+          <li><b>트렁크(Trunk) 포트</b>: 여러 VLAN의 트래픽을 하나의 링크로 동시에 전달하는 스위치 간 연결 포트.</li>
+          <li><b>Standard ACL</b>: 출발지 IP만 검사. <b>Extended ACL</b>: 출발지·목적지 IP, 포트, 프로토콜까지 세밀하게 검사.</li>
+          <li><b>PAT(Port Address Translation)</b>: 하나의 공인 IP를 포트 번호로 구분해 여러 내부 호스트가 동시에 공유(NAT Overload).</li>
+        </ul>
+      </section>
+
+      <!-- 9. 무선랜 표준 -->
+      <section class="summary-section high-yield" id="wifi">
+        <div class="section-kicker">03 · 무선랜 구축 <span class="badge-new">★최신개정</span></div>
+        <h2>무선랜(IEEE 802.11) 표준 비교</h2>
+
+        <table>
+          <thead><tr><th>표준</th><th>주파수 대역</th><th>최대 속도(이론치)</th></tr></thead>
+          <tbody>
+            <tr><td>802.11b</td><td>2.4GHz</td><td>11Mbps</td></tr>
+            <tr><td>802.11a</td><td>5GHz</td><td>54Mbps</td></tr>
+            <tr><td>802.11g</td><td>2.4GHz</td><td>54Mbps</td></tr>
+            <tr><td>802.11n</td><td>2.4GHz/5GHz</td><td>~600Mbps (MIMO)</td></tr>
+            <tr><td>802.11ac</td><td>5GHz</td><td>~1Gbps 이상</td></tr>
+            <tr><td>802.11ax(Wi-Fi 6)</td><td>2.4GHz/5GHz(/6GHz)</td><td>~9.6Gbps</td></tr>
+          </tbody>
+        </table>
+
+        <ul class="key-list">
+          <li><b>SSID</b>: 무선랜의 네트워크 이름 (사용자가 접속할 AP를 구분하는 식별자)</li>
+          <li><b>PoE(Power over Ethernet)</b>: 랜케이블을 통해 데이터와 함께 전력을 공급 — AP 등에 별도 전원선 불필요</li>
+          <li><b>WLC(Wireless LAN Controller)</b>: 다수의 AP를 중앙에서 통합 관리·제어하는 장치</li>
+        </ul>
+      </section>
+
+      <!-- 10. 무선랜 보안 -->
+      <section class="summary-section high-yield" id="wifisec">
+        <div class="section-kicker">03 · 무선랜 구축 <span class="badge-new">★최신개정</span></div>
+        <h2>무선랜 보안표준: WEP·WPA·WPA2·WPA3</h2>
+
+        <table>
+          <thead><tr><th>표준</th><th>암호화 방식</th><th>특징</th></tr></thead>
+          <tbody>
+            <tr><td>WEP</td><td>RC4</td><td>초기 표준, <b>취약점 다수 발견 — 현재 사용 비권장</b></td></tr>
+            <tr><td>WPA</td><td>TKIP</td><td>WEP 취약점 보완한 임시 대책</td></tr>
+            <tr><td>WPA2</td><td>AES-CCMP</td><td>오랫동안 표준으로 사용, 강력한 암호화</td></tr>
+            <tr><td>WPA3</td><td>AES(강화) / SAE</td><td>최신 표준, 오프라인 무차별 공격에 더 강함</td></tr>
+          </tbody>
+        </table>
+
+        <div class="memory-box">
+          <b>보안 강도: WEP &lt; WPA &lt; WPA2 &lt; WPA3</b>
+          <span>암기 치트키: "웹(WEP)은 뚫린다, WPA2/3가 표준"</span>
+        </div>
+      </section>
+
+      <!-- 11. 네트워크 운영관리 -->
+      <section class="summary-section" id="netops">
+        <div class="section-kicker">04 · 네트워크 운영관리 <span class="badge-new">★최신개정</span></div>
+        <h2>네트워크 트래픽·NMS 운용</h2>
+        <ul class="key-list">
+          <li><b>대역폭(Bandwidth)</b>: 단위 시간당 전송 가능한 <b>최대</b> 데이터량 (이론적 최대치). <b>처리량(Throughput)</b>은 실제로 전송된 양(대역폭보다 항상 작거나 같음).</li>
+          <li><b>NMS(Network Management System)</b>: 네트워크 장비 상태를 중앙에서 모니터링·관리하는 시스템.</li>
+          <li><b>SNMP(Simple Network Management Protocol)</b>: NMS가 장비 상태 정보를 수집하는 데 사용하는 표준 프로토콜.</li>
+        </ul>
+      </section>
+
+      <!-- 12. OS 명령어·케이블 -->
+      <section class="summary-section high-yield" id="terminal">
+        <div class="section-kicker">06 · HW 단말장치 운영관리 <span class="badge-new">★최신개정</span></div>
+        <h2>Windows/Linux 기본 명령어와 통신케이블</h2>
+
+        <table>
+          <thead><tr><th>목적</th><th>Windows</th><th>Linux</th></tr></thead>
+          <tbody>
+            <tr><td>IP 확인</td><td><code>ipconfig</code></td><td><code>ip addr</code> / <code>ifconfig</code></td></tr>
+            <tr><td>연결 확인</td><td><code>ping</code></td><td><code>ping</code></td></tr>
+            <tr><td>경로 추적</td><td><code>tracert</code></td><td><code>traceroute</code></td></tr>
+            <tr><td>프로세스 확인</td><td><code>tasklist</code></td><td><code>ps</code></td></tr>
+          </tbody>
+        </table>
+
+        <table>
+          <thead><tr><th>케이블</th><th>특징·용도</th></tr></thead>
+          <tbody>
+            <tr><td>UTP(비차폐 트위스트페어)</td><td>가장 흔한 LAN 케이블, 카테고리(CAT5e/6/6a)에 따라 속도 차등, RJ-45 커넥터</td></tr>
+            <tr><td>광케이블</td><td>빛으로 신호 전송, 장거리·초고속·전기적 잡음에 매우 강함 (단일모드=장거리, 다중모드=단거리)</td></tr>
+            <tr><td>동축케이블</td><td>중심도체+차폐망 구조, CATV·백본망 등에 사용, UTP보다 잡음에 강하나 광케이블보다는 약함</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 13. 서버 가상화·클라우드 -->
+      <section class="summary-section high-yield" id="virt">
+        <div class="section-kicker">07 · 서버운용 <span class="badge-new">★최신개정</span></div>
+        <h2>서버 가상화와 클라우드 플랫폼</h2>
+
+        <ul class="key-list">
+          <li><b>하이퍼바이저</b>: 하나의 물리 서버에서 여러 가상머신(VM)을 생성·관리하는 소프트웨어 (예: VMware ESXi, Hyper-V, KVM).</li>
+          <li><b>Type 1(Bare-metal)</b>: 하드웨어에 직접 설치 (ESXi 등). <b>Type 2(Hosted)</b>: 기존 OS 위에 설치되어 실행 (VirtualBox 등).</li>
+        </ul>
+
+        <table>
+          <thead><tr><th>클라우드 서비스 모델</th><th>제공 범위</th></tr></thead>
+          <tbody>
+            <tr><td><b>IaaS</b></td><td>가상 서버·스토리지·네트워크 등 인프라만 제공 (사용자가 OS부터 설치)</td></tr>
+            <tr><td><b>PaaS</b></td><td>OS·미들웨어까지 제공, 개발 플랫폼 환경 제공 (사용자는 애플리케이션만 개발)</td></tr>
+            <tr><td><b>SaaS</b></td><td>완성된 소프트웨어(응용프로그램) 자체를 서비스로 제공 (예: 웹메일, 오피스365)</td></tr>
+          </tbody>
+        </table>
+
+        <p><b>배포 모델</b>: 퍼블릭 클라우드(불특정 다수가 공유), 프라이빗 클라우드(단일 조직 전용), 하이브리드 클라우드(둘을 혼합).</p>
+      </section>
+
+      <!-- 14. 방화벽·보안위협 -->
+      <section class="summary-section" id="security">
+        <div class="section-kicker">02 · 네트워크 보안관리</div>
+        <h2>방화벽·보안위협·IDS</h2>
+        <ul class="key-list">
+          <li><b>방화벽(Firewall)</b>: 내부 네트워크와 외부 네트워크 사이에서 정해진 규칙에 따라 접속을 허용/차단하는 장치.</li>
+          <li><b>IDS(Intrusion Detection System)</b>: 침입 행위를 <b>탐지</b>하는 시스템 (차단은 하지 않음 — 차단까지 하면 IPS).</li>
+          <li><b>백도어(Trapdoor)</b>: 설계자가 유지보수 편의를 위해 고의로 만들어 둔 보안 우회 통로.</li>
+          <li><b>보안 3요소</b>: 관리적 보안(정책·규정·교육) · 물리적 보안(출입통제·시설보호) · 기술적 보안(방화벽·암호화·인증).</li>
+        </ul>
+      </section>
+
+      <!-- 15. 파이널 암기장 -->
+      <section class="summary-section final-sheet" id="last">
+        <div class="section-kicker">15 · LAST CHECK</div>
+        <h2>시험장 들어가기 전 마지막 10분 초압축 암기장</h2>
+        <p class="lead">헷갈리기 쉬운 정의·공식·비교를 한눈에 최종 점검하세요.</p>
+
+        <div class="last-grid">
+          <div>
+            <b>OSI 7계층(아래→위)</b>
+            <p>1물리-2링크-3네트워크<br />4전송-5세션-6표현-7응용<br />"물데네 전세표응"</p>
+          </div>
+          <div>
+            <b>서브넷 호스트 수</b>
+            <p>/24=254 · /25=126<br />/26=62 · /27=30 · /28=14<br />공식: 2ⁿ-2</p>
+          </div>
+          <div>
+            <b>라우팅 프로토콜</b>
+            <p>정적=수동<br />RIP=거리벡터(홉)<br />OSPF=링크상태(대규모)<br />EIGRP=Cisco 하이브리드</p>
+          </div>
+          <div>
+            <b>Telnet vs SSH</b>
+            <p>Telnet=평문·포트23<br />SSH=암호화·포트22<br />→ 항상 SSH가 안전</p>
+          </div>
+          <div>
+            <b>무선보안 강도</b>
+            <p>WEP(RC4,취약) &lt;<br />WPA(TKIP) &lt;<br />WPA2(AES) &lt; WPA3</p>
+          </div>
+          <div>
+            <b>VLAN·ACL·NAT</b>
+            <p>VLAN=논리적 분리<br />ACL=허용/차단 규칙<br />NAT=사설↔공인IP 변환</p>
+          </div>
+          <div>
+            <b>클라우드 모델</b>
+            <p>IaaS=인프라만<br />PaaS=플랫폼까지<br />SaaS=완성 SW 제공</p>
+          </div>
+          <div>
+            <b>방화벽·IDS</b>
+            <p>방화벽=차단 장치<br />IDS=탐지만(차단은 IPS)<br />보안3요소=관리·물리·기술</p>
+          </div>
+        </div>
+
+        <div class="final-cta">
+          <div>
+            <b>개념 정리를 마쳤다면 이제 실전 모의고사를 풀어보세요!</b>
+            <span>직접 문제를 풀며 틀린 부분은 해당 섹션으로 돌아와 다시 확인하면 완벽합니다.</span>
+          </div>
+          <a class="btn" href="quiz.html?mode=round">회차별 실전 모의고사 풀기</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      정보기기운용기능사 필기 합격 대비 요약노트 · 2026 개정 출제기준 반영
+    </footer>
+  </div>
+
+  <script src="js/theme.js"></script>
+  <script src="js/summary-footnotes.js" defer></script>
+</body>
+</html>
